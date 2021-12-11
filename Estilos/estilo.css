@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     background-image: url(../Imagenes/background.jpg);
     background-repeat: no-repeat;
@@ -16,7 +18,13 @@ body {
     width: 100%;
     transition: 0.1s;
     display: inline-block;
+    position: relative;
 }
+.extra{
+    position: absolute;
+    bottom: 0; 
+ }
+
 .dZoom:hover{
     transform: scale(1.02);
 }
@@ -28,6 +36,10 @@ img {
     max-width: 100%;
     max-height: 100%;
     border-radius: .3rem;
+}
+.fecha{
+    color: white;
+    text-shadow: 1px 1px 1px black,1px 1px 2px black,1px 1px 3px black;
 }
 
 header {
