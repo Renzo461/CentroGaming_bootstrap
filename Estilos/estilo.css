@@ -7,7 +7,7 @@ a{
     text-decoration: none;
 }
 body {
-    background-image: url(../Imagenes/background.jpg);
+    background-image: url(../Imagenes/background.jpg);    
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 1fr;
@@ -20,6 +20,7 @@ body {
     display: inline-block;
     position: relative;
 }
+
 .extra{
     position: absolute;
     bottom: 0; 
@@ -37,9 +38,18 @@ img {
     max-height: 100%;
     border-radius: .3rem;
 }
-.fecha{
-    color: white;
-    text-shadow: 1px 1px 1px black,1px 1px 2px black,1px 1px 3px black;
+.proximo{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+.fecha{    
+    position: relative;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 0.3rem;
+    background-color:rgba(0, 0, 0, 0.885);
+    color: aliceblue;
 }
 
 header {
@@ -84,4 +94,18 @@ main {
     75%{text-shadow: 0 0 2px cyan,0 0 5px cyan;}
     100%{text-shadow: 0 0 2px cyan;}
  }
+
+ .noticia{
+     color:dimgray;
+ }
+ .nImagen{
+     width: 100px;
+     height: 100px;
+ }
+ .faq{
+    background-image: linear-gradient(to bottom,rgb(235, 235, 235) 98%, rgba(0, 0, 0, 0));    
+}
+.faq h2{
+    color: rgb(24, 49, 121);
+}
  
