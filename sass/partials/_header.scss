@@ -1,0 +1,25 @@
+header {
+    color: white;
+    background-image: linear-gradient(to bottom, black 90%, rgba(0, 0, 0, 0));
+    .logo {
+        width: 68px;
+        height: 51px;        
+    }
+    .lTexto {
+        font-size: 2rem;
+        animation-name: led;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 6s;
+        animation-direction: reverse;
+        animation-delay: 2s;
+        @keyframes led {
+            0%{text-shadow: 0 0 2px cyan;}
+            25%{text-shadow: 0 0 2px cyan,0 0 5px cyan;}
+            50%{text-shadow: 0 0 2px cyan,0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;letter-spacing: 1px;}
+            75%{text-shadow: 0 0 2px cyan,0 0 5px cyan;}
+            100%{text-shadow: 0 0 2px cyan;}
+        }
+    }
+}
+

@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: .3rem;
+}
+
+body {
+  background-image: url(../Imagenes/background.jpg);
+  background-repeat: no-repeat;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, black 90%, rgba(0, 0, 0, 0));
+}
+
+header .logo {
+  width: 68px;
+  height: 51px;
+}
+
+header .lTexto {
+  font-size: 2rem;
+  -webkit-animation-name: led;
+          animation-name: led;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  animation-direction: reverse;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes led {
+  0% {
+    text-shadow: 0 0 2px cyan;
+  }
+  25% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+  }
+  50% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;
+    letter-spacing: 1px;
+  }
+  75% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+  }
+  100% {
+    text-shadow: 0 0 2px cyan;
+  }
+}
+
+@keyframes led {
+  0% {
+    text-shadow: 0 0 2px cyan;
+  }
+  25% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+  }
+  50% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;
+    letter-spacing: 1px;
+  }
+  75% {
+    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+  }
+  100% {
+    text-shadow: 0 0 2px cyan;
+  }
+}
+
+main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(1.5%, aliceblue), color-stop(98.5%, aliceblue), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), aliceblue 1.5%, aliceblue 98.5%, rgba(0, 0, 0, 0));
+}
+
+.dZoom {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  display: inline-block;
+  position: relative;
+}
+
+.dZoom:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.jZoom {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  display: inline-block;
+  position: relative;
+}
+
+.jZoom:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+footer {
+  color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, black), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, black 90%, rgba(0, 0, 0, 0));
+}
+
+footer .redes {
+  width: 40px;
+  height: 40px;
+}
+
+.proximo {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.proximo .extra {
+  position: absolute;
+  bottom: 0;
+}
+
+.proximo .extra .fecha {
+  position: relative;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.885);
+  color: aliceblue;
+}
+
+.faq {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(98%, #ebebeb), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, #ebebeb 98%, rgba(0, 0, 0, 0));
+}
+
+.faq h2 {
+  color: #183179;
+}

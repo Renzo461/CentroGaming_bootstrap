@@ -1,0 +1,8 @@
+.jZoom{
+    transition: 0.1s;
+    display: inline-block;
+    position: relative;
+    &:hover{
+        transform: scale(1.03);
+    }
+}
