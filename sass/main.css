@@ -96,28 +96,82 @@ main {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), aliceblue 1.5%, aliceblue 98.5%, rgba(0, 0, 0, 0));
 }
 
-.dZoom {
+.destacado-articulo-link {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   display: inline-block;
   position: relative;
 }
 
-.dZoom:hover {
+.destacado-articulo-link:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-.jZoom {
+.destacado-articulo-link-imagen {
+  -webkit-box-shadow: 0px 0px 3px 2px black;
+          box-shadow: 0px 0px 3px 2px black;
+}
+
+.destacado-articulo-link-extra {
+  position: absolute;
+  bottom: 0;
+}
+
+.destacado-articulo-link-extra-precio {
+  position: relative;
+  left: -6px;
+  bottom: -6px;
+  border-radius: 0.3rem;
+  background-color: aqua;
+  color: black;
+}
+
+.destacado-articulo-link-extra-descuento {
+  position: relative;
+  bottom: -6px;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: aliceblue;
+}
+
+.juegos-articulo-link {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   display: inline-block;
   position: relative;
 }
 
-.jZoom:hover {
+.juegos-articulo-link:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+.juegos-articulo-link-imagen {
+  -webkit-box-shadow: 0px 0px 5px 1px black;
+          box-shadow: 0px 0px 5px 1px black;
+}
+
+.juegos-articulo-link-extra {
+  position: absolute;
+  bottom: 0;
+}
+
+.juegos-articulo-link-extra-precio {
+  position: relative;
+  left: -6px;
+  bottom: -6px;
+  border-radius: 0.3rem;
+  background-color: aqua;
+  color: black;
+}
+
+.juegos-articulo-link-extra-descuento {
+  position: relative;
+  bottom: -6px;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: aliceblue;
 }
 
 footer {
@@ -131,23 +185,32 @@ footer .redes {
   height: 40px;
 }
 
-.proximo {
+.estreno-articulo-link {
   width: 100%;
   display: inline-block;
   position: relative;
 }
 
-.proximo .extra {
+.estreno-articulo-link-extra {
   position: absolute;
   bottom: 0;
 }
 
-.proximo .extra .fecha {
+.estreno-articulo-link-extra-precio {
   position: relative;
-  right: -2px;
+  left: -2px;
   bottom: -2px;
   border-radius: 0.3rem;
-  background-color: rgba(0, 0, 0, 0.885);
+  background-color: aqua;
+  color: black;
+}
+
+.estreno-articulo-link-extra-fecha {
+  position: relative;
+  right: 0px;
+  bottom: -2px;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.95);
   color: aliceblue;
 }
 
