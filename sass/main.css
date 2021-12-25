@@ -29,8 +29,8 @@ body {
 
 header {
   color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, black 90%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #080808), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, #080808 90%, rgba(0, 0, 0, 0));
 }
 
 header .logo {
@@ -55,45 +55,49 @@ header .lTexto {
 
 @-webkit-keyframes led {
   0% {
-    text-shadow: 0 0 2px cyan;
+    text-shadow: 0 0 2px #52FBFF;
   }
   25% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
   }
   50% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF, 0 0 10px #52FBFF, 0 0 15px #52FBFF;
     letter-spacing: 1px;
   }
   75% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
   }
   100% {
-    text-shadow: 0 0 2px cyan;
+    text-shadow: 0 0 2px #52FBFF;
   }
 }
 
 @keyframes led {
   0% {
-    text-shadow: 0 0 2px cyan;
+    text-shadow: 0 0 2px #52FBFF;
   }
   25% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
   }
   50% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF, 0 0 10px #52FBFF, 0 0 15px #52FBFF;
     letter-spacing: 1px;
   }
   75% {
-    text-shadow: 0 0 2px cyan,0 0 5px cyan;
+    text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
   }
   100% {
-    text-shadow: 0 0 2px cyan;
+    text-shadow: 0 0 2px #52FBFF;
   }
 }
 
+header div nav a {
+  color: #E8F9FA;
+}
+
 main {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(1.5%, aliceblue), color-stop(98.5%, aliceblue), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), aliceblue 1.5%, aliceblue 98.5%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(1.5%, #E8F9FA), color-stop(98.5%, #E8F9FA), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #E8F9FA 1.5%, #E8F9FA 98.5%, rgba(0, 0, 0, 0));
 }
 
 .destacado-articulo-link {
@@ -109,8 +113,8 @@ main {
 }
 
 .destacado-articulo-link-imagen {
-  -webkit-box-shadow: 0px 0px 3px 2px black;
-          box-shadow: 0px 0px 3px 2px black;
+  -webkit-box-shadow: 0px 0px 3px 2px #080808;
+          box-shadow: 0px 0px 3px 2px #080808;
 }
 
 .destacado-articulo-link-extra {
@@ -118,21 +122,19 @@ main {
   bottom: 0;
 }
 
-.destacado-articulo-link-extra-precio {
+.destacado-articulo-link-extra-precio, .destacado-articulo-link-extra-descuento, .juegos-articulo-link-extra-precio, .juegos-articulo-link-extra-descuento, .estreno-articulo-link-extra-precio, .estreno-articulo-link-extra-fecha {
   position: relative;
   left: -6px;
   bottom: -6px;
   border-radius: 0.3rem;
-  background-color: aqua;
-  color: black;
+  background-color: #52FBFF;
+  color: #080808;
 }
 
 .destacado-articulo-link-extra-descuento {
-  position: relative;
-  bottom: -6px;
-  border-radius: 0.3rem;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.95);
-  color: aliceblue;
+  color: #E8F9FA;
 }
 
 .juegos-articulo-link {
@@ -148,8 +150,8 @@ main {
 }
 
 .juegos-articulo-link-imagen {
-  -webkit-box-shadow: 0px 0px 5px 1px black;
-          box-shadow: 0px 0px 5px 1px black;
+  -webkit-box-shadow: 0px 0px 5px 1px #080808;
+          box-shadow: 0px 0px 5px 1px #080808;
 }
 
 .juegos-articulo-link-extra {
@@ -157,27 +159,16 @@ main {
   bottom: 0;
 }
 
-.juegos-articulo-link-extra-precio {
-  position: relative;
-  left: -6px;
-  bottom: -6px;
-  border-radius: 0.3rem;
-  background-color: aqua;
-  color: black;
-}
-
 .juegos-articulo-link-extra-descuento {
-  position: relative;
-  bottom: -6px;
-  border-radius: 0.3rem;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.95);
-  color: aliceblue;
+  color: #E8F9FA;
 }
 
 footer {
-  color: white;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, black), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to top, black 90%, rgba(0, 0, 0, 0));
+  color: #E8F9FA;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #080808), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, #080808 90%, rgba(0, 0, 0, 0));
 }
 
 footer .redes {
@@ -197,28 +188,22 @@ footer .redes {
 }
 
 .estreno-articulo-link-extra-precio {
-  position: relative;
   left: -2px;
   bottom: -2px;
-  border-radius: 0.3rem;
-  background-color: aqua;
-  color: black;
 }
 
 .estreno-articulo-link-extra-fecha {
-  position: relative;
   right: 0px;
   bottom: -2px;
-  border-radius: 0.3rem;
   background-color: rgba(0, 0, 0, 0.95);
-  color: aliceblue;
+  color: #E8F9FA;
 }
 
 .faq {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(98%, #ebebeb), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, #ebebeb 98%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(98%, #E8F9FA), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, #E8F9FA 98%, rgba(0, 0, 0, 0));
 }
 
 .faq h2 {
-  color: #183179;
+  color: #FF9352;
 }

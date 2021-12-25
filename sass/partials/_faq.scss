@@ -1,6 +1,6 @@
 .faq {
-    background-image: linear-gradient(to bottom, rgb(235, 235, 235) 98%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to bottom, map-get($colores,claro) 98%, rgba(0, 0, 0, 0));
     h2 {
-        color: rgb(24, 49, 121);
+        color: map-get($colores,extra);
     }
 }

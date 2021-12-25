@@ -1,0 +1,11 @@
+$colores: (
+    primario: #52FBFF,
+    oscuro: #080808,
+    claro: #E8F9FA,
+    resaltar: #27AFB3,
+    extra: #FF9352,
+);
+@mixin posicion-abajo{
+    position: absolute;
+    bottom: 0;
+}

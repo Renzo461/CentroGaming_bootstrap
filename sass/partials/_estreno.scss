@@ -5,23 +5,18 @@
             display: inline-block;
             position: relative;
             &-extra{
-                position: absolute;
-                bottom: 0;
+                @include posicion-abajo;
                 &-precio{
-                    position: relative;
+                    @extend .destacado-articulo-link-extra-precio;
                     left: -2px;
                     bottom: -2px;
-                    border-radius: 0.3rem;
-                    background-color: aqua;
-                    color: black;
                 }
                 &-fecha{
-                    position: relative;
+                    @extend .destacado-articulo-link-extra-precio;                    
                     right: 0px;
                     bottom: -2px;
-                    border-radius: 0.3rem;
                     background-color: rgba(0, 0, 0, 0.950);
-                    color: aliceblue;
+                    color: map-get($colores,claro);
                 }
             }
         }

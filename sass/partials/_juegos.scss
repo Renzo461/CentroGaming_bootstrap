@@ -8,25 +8,18 @@
                 transform: scale(1.03);
             }
             &-imagen{
-                box-shadow: 0px 0px 5px 1px black;
+                box-shadow: 0px 0px 5px 1px map-get($colores,oscuro);
             }
             &-extra{
-                position: absolute;
-                bottom: 0;
+                @include posicion-abajo;
                 &-precio{
-                    position: relative;
-                    left: -6px;
-                    bottom: -6px;
-                    border-radius: 0.3rem;
-                    background-color: aqua;
-                    color: black;
+                    @extend .destacado-articulo-link-extra-precio;
                 }
                 &-descuento{
-                    position: relative;                    
-                    bottom: -6px;
-                    border-radius: 0.3rem;
+                    @extend .destacado-articulo-link-extra-precio;
+                    left: 0;
                     background-color: rgba(0, 0, 0, 0.950);
-                    color: aliceblue;
+                    color: map-get($colores,claro);
                 }
             }
         }        
