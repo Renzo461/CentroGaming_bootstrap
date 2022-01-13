@@ -4,20 +4,39 @@
             width: 100%;
             display: inline-block;
             position: relative;
-            &-extra{
-                @include posicion-abajo;
-                &-precio{
-                    @extend .destacado-articulo-link-extra-precio;
-                    left: -2px;
-                    bottom: -2px;
+            &-fecha{
+                z-index: 1;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                border-radius: 1rem;
+                background-color: map-get($colores,celeste);
+                color: map-get($colores,negro);
+                &::after{
+                    z-index: -1;
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 21px;
+                    right: 0;
+                    top: 19px;
+                    background-color: map-get($colores,celeste);
                 }
-                &-fecha{
-                    @extend .destacado-articulo-link-extra-precio;                    
-                    right: 0px;
-                    bottom: -2px;
-                    background-color: rgba(0, 0, 0, 0.950);
-                    color: map-get($colores,claro);
+                &::before{
+                    z-index: 1;
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 20px;
+                    right: 0;
+                    top: 32px;
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                    background-color: map-get($colores,resaltar);
                 }
+            }
+            &-precio{
+                @include precio;
             }
         }
     }

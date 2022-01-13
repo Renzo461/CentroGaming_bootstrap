@@ -1,6 +1,6 @@
 footer {
-    color: map-get($colores,claro);
-    background-image: linear-gradient(to top, map-get($colores,oscuro) 90%, rgba(0, 0, 0, 0));
+    color: map-get($colores,blanco);
+    background-image: linear-gradient(to top, map-get($colores,negro) 90%, map-get($colores,transparente));
     .redes {
         width: 40px;
         height: 40px;

@@ -29,8 +29,8 @@ body {
 
 header {
   color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #080808), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, #080808 90%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #080808), to(#ffffff00));
+  background-image: linear-gradient(to bottom, #080808 90%, #ffffff00);
 }
 
 header .logo {
@@ -46,8 +46,8 @@ header .lTexto {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   animation-direction: reverse;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
@@ -62,7 +62,6 @@ header .lTexto {
   }
   50% {
     text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF, 0 0 10px #52FBFF, 0 0 15px #52FBFF;
-    letter-spacing: 1px;
   }
   75% {
     text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
@@ -81,7 +80,6 @@ header .lTexto {
   }
   50% {
     text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF, 0 0 10px #52FBFF, 0 0 15px #52FBFF;
-    letter-spacing: 1px;
   }
   75% {
     text-shadow: 0 0 2px #52FBFF, 0 0 5px #52FBFF;
@@ -92,12 +90,17 @@ header .lTexto {
 }
 
 header div nav a {
-  color: #E8F9FA;
+  color: #e4ecec;
+}
+
+header div nav a:hover {
+  color: #002ab4;
+  font-weight: bold;
 }
 
 main {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(1.5%, #E8F9FA), color-stop(98.5%, #E8F9FA), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #E8F9FA 1.5%, #E8F9FA 98.5%, rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(1.5%, #e4ecec), color-stop(98.5%, #e4ecec), to(#ffffff00));
+  background-image: linear-gradient(to bottom, #ffffff00, #e4ecec 1.5%, #e4ecec 98.5%, #ffffff00);
 }
 
 .destacado-articulo-link {
@@ -108,8 +111,8 @@ main {
 }
 
 .destacado-articulo-link:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .destacado-articulo-link-imagen {
@@ -117,24 +120,62 @@ main {
           box-shadow: 0px 0px 3px 2px #080808;
 }
 
-.destacado-articulo-link-extra {
+.destacado-articulo-link-descuento {
+  overflow: hidden;
   position: absolute;
-  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -10px;
+  right: -10px;
+  width: 70px;
+  height: 70px;
 }
 
-.destacado-articulo-link-extra-precio, .destacado-articulo-link-extra-descuento, .juegos-articulo-link-extra-precio, .juegos-articulo-link-extra-descuento, .estreno-articulo-link-extra-precio, .estreno-articulo-link-extra-fecha {
-  position: relative;
-  left: -6px;
-  bottom: -6px;
-  border-radius: 0.3rem;
+.destacado-articulo-link-descuento-contenedor {
+  z-index: 1;
+  position: absolute;
+  width: 200%;
+  -webkit-transform: rotate(45deg) translateY(-16px);
+          transform: rotate(45deg) translateY(-16px);
   background-color: #52FBFF;
   color: #080808;
+  text-align: center;
 }
 
-.destacado-articulo-link-extra-descuento {
+.destacado-articulo-link-descuento::after {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #E8F9FA;
+  width: 8px;
+  height: 8px;
+  background-color: #2f6668;
+}
+
+.destacado-articulo-link-descuento::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #2f6668;
+}
+
+.destacado-articulo-link-precio {
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  border-radius: 0.3rem;
+  background-color: #080808;
+  color: #e4ecec;
 }
 
 .juegos-articulo-link {
@@ -150,25 +191,72 @@ main {
 }
 
 .juegos-articulo-link-imagen {
-  -webkit-box-shadow: 0px 0px 5px 1px #080808;
-          box-shadow: 0px 0px 5px 1px #080808;
+  -webkit-box-shadow: 0px 0px 3px 2px #080808;
+          box-shadow: 0px 0px 3px 2px #080808;
 }
 
-.juegos-articulo-link-extra {
+.juegos-articulo-link-descuento {
+  overflow: hidden;
   position: absolute;
-  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -10px;
+  right: -10px;
+  width: 70px;
+  height: 70px;
 }
 
-.juegos-articulo-link-extra-descuento {
+.juegos-articulo-link-descuento-contenedor {
+  z-index: 1;
+  position: absolute;
+  width: 200%;
+  -webkit-transform: rotate(45deg) translateY(-16px);
+          transform: rotate(45deg) translateY(-16px);
+  background-color: #52FBFF;
+  color: #080808;
+  text-align: center;
+}
+
+.juegos-articulo-link-descuento::after {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #E8F9FA;
+  width: 8px;
+  height: 8px;
+  background-color: #2f6668;
+}
+
+.juegos-articulo-link-descuento::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #2f6668;
+}
+
+.juegos-articulo-link-precio {
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  border-radius: 0.3rem;
+  background-color: #080808;
+  color: #e4ecec;
 }
 
 footer {
-  color: #E8F9FA;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #080808), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to top, #080808 90%, rgba(0, 0, 0, 0));
+  color: #e4ecec;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #080808), to(#ffffff00));
+  background-image: linear-gradient(to top, #080808 90%, #ffffff00);
 }
 
 footer .redes {
@@ -182,28 +270,49 @@ footer .redes {
   position: relative;
 }
 
-.estreno-articulo-link-extra {
+.estreno-articulo-link-fecha {
+  z-index: 1;
   position: absolute;
-  bottom: 0;
+  top: -10px;
+  right: -10px;
+  border-radius: 1rem;
+  background-color: #52FBFF;
+  color: #080808;
 }
 
-.estreno-articulo-link-extra-precio {
-  left: -2px;
-  bottom: -2px;
+.estreno-articulo-link-fecha::after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 21px;
+  right: 0;
+  top: 19px;
+  background-color: #52FBFF;
 }
 
-.estreno-articulo-link-extra-fecha {
-  right: 0px;
-  bottom: -2px;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #E8F9FA;
+.estreno-articulo-link-fecha::before {
+  z-index: 1;
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 20px;
+  right: 0;
+  top: 32px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #2f6668;
 }
 
-.faq {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(98%, #E8F9FA), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to bottom, #E8F9FA 98%, rgba(0, 0, 0, 0));
+.estreno-articulo-link-precio {
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  border-radius: 0.3rem;
+  background-color: #080808;
+  color: #e4ecec;
 }
 
 .faq h2 {
-  color: #FF9352;
+  color: #002ab4;
 }

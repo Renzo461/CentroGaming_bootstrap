@@ -1,31 +1,15 @@
 .destacado{
     &-articulo{        
         &-link{
-            transition: 0.1s;
-            display: inline-block;
-            position: relative;
-            &:hover{
-                transform: scale(1.02);
-            }
+            @include animación_producto;
             &-imagen{
-                box-shadow: 0px 0px 3px 2px map-get($colores,oscuro);
+                @include sombra_producto;
             }
-            &-extra{
-                @include posicion-abajo;
-                &-precio{
-                    position: relative;
-                    left: -6px;
-                    bottom: -6px;
-                    border-radius: 0.3rem;
-                    background-color: map-get($colores,primario);
-                    color: map-get($colores,oscuro);
-                }
-                &-descuento{
-                    @extend .destacado-articulo-link-extra-precio;
-                    left: 0;
-                    background-color: rgba(0, 0, 0, 0.950);
-                    color: map-get($colores,claro);
-                }
+            &-descuento{
+                @include descuento;
+            }
+            &-precio{
+                @include precio;               
             }
         }
     }

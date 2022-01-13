@@ -1,6 +1,6 @@
 header {
     color: white;
-    background-image: linear-gradient(to bottom, map-get($colores,oscuro) 90%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to bottom, map-get($colores,negro) 90%, map-get($colores,transparente));
     .logo {
         width: 68px;
         height: 51px;        
@@ -10,19 +10,23 @@ header {
         animation-name: led;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-duration: 6s;
+        animation-duration: 5s;
         animation-direction: reverse;
         animation-delay: 2s;
         @keyframes led {
-            0%{text-shadow: 0 0 2px map-get($colores, primario);}
-            25%{text-shadow: 0 0 2px map-get($colores, primario),0 0 5px map-get($colores, primario);}
-            50%{text-shadow: 0 0 2px map-get($colores, primario),0 0 5px map-get($colores, primario),0 0 10px map-get($colores, primario),0 0 15px map-get($colores, primario);letter-spacing: 1px;}
-            75%{text-shadow: 0 0 2px map-get($colores, primario),0 0 5px map-get($colores, primario);}
-            100%{text-shadow: 0 0 2px map-get($colores, primario);}
+            0%{text-shadow: 0 0 2px map-get($colores, celeste);}
+            25%{text-shadow: 0 0 2px map-get($colores, celeste),0 0 5px map-get($colores, celeste);}
+            50%{text-shadow: 0 0 2px map-get($colores, celeste),0 0 5px map-get($colores, celeste),0 0 10px map-get($colores, celeste),0 0 15px map-get($colores, celeste);}
+            75%{text-shadow: 0 0 2px map-get($colores, celeste),0 0 5px map-get($colores, celeste);}
+            100%{text-shadow: 0 0 2px map-get($colores, celeste);}
         }
     }
     div nav a{
-        color: map-get($colores,claro);
+        color: map-get($colores,blanco);          
+        &:hover{
+            color: map-get($colores,extra);
+            font-weight: bold;            
+        }
     }
 }
 

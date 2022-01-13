@@ -1,11 +1,65 @@
 $colores: (
-    primario: #52FBFF,
-    oscuro: #080808,
-    claro: #E8F9FA,
-    resaltar: #27AFB3,
-    extra: #FF9352,
+    celeste: #52FBFF,
+    negro: #080808,
+    blanco: #e4ecec,
+    resaltar: #2f6668,
+    extra: #002ab4,
+    transparente: #ffffff00,
 );
-@mixin posicion-abajo{
+@mixin animación_producto {
+    transition: 0.1s;
+    display: inline-block;
+    position: relative;            
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+@mixin sombra_producto {
+    box-shadow: 0px 0px 3px 2px map-get($colores,negro);
+}
+@mixin descuento{
+    overflow: hidden;
     position: absolute;
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    right: -10px;
+    width: 70px;
+    height: 70px;
+    &-contenedor{
+        z-index: 1;
+        position: absolute;
+        width: 200%;
+        transform: rotate(45deg) translateY(-16px);
+        background-color: map-get($colores,celeste);
+        color: map-get($colores,negro); 
+        text-align: center;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background-color: map-get($colores,resaltar);
+    }
+    &::before{                        
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 8px;
+        height: 8px;
+        background-color: map-get($colores,resaltar);
+    }
+}
+@mixin precio {
+    position: absolute;
+    bottom: -7px;
+    left: -7px;
+    border-radius: 0.3rem;
+    background-color: map-get($colores,negro);
+    color: map-get($colores,blanco);
 }
