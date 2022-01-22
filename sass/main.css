@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+h2 {
+  color: #3a4446;
+}
+
 a {
   text-decoration: none;
 }
@@ -28,9 +32,9 @@ body {
 }
 
 header {
-  color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #080808), to(#ffffff00));
-  background-image: linear-gradient(to bottom, #080808 90%, #ffffff00);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #000000), to(#ffffff00));
+  background-image: linear-gradient(to bottom, #000000 90%, #ffffff00);
+  cursor: default;
 }
 
 header .logo {
@@ -39,6 +43,7 @@ header .logo {
 }
 
 header .lTexto {
+  color: white;
   font-size: 2rem;
   -webkit-animation-name: led;
           animation-name: led;
@@ -89,23 +94,44 @@ header .lTexto {
   }
 }
 
-header div nav a {
-  color: #e4ecec;
+header div nav .link {
+  position: relative;
+  color: #52FBFF;
 }
 
-header div nav a:hover {
-  color: #002ab4;
-  font-weight: bold;
+header div nav .link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background: #459AFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+header div nav .link:hover {
+  color: #3FB9E8;
+}
+
+header div nav .link:hover::before {
+  width: 100%;
+}
+
+header div nav .active {
+  position: relative;
+  color: #ffffff;
 }
 
 main {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(1.5%, #e4ecec), color-stop(98.5%, #e4ecec), to(#ffffff00));
-  background-image: linear-gradient(to bottom, #ffffff00, #e4ecec 1.5%, #e4ecec 98.5%, #ffffff00);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(1.5%, #ffffff), color-stop(98.5%, #ffffff), to(#ffffff00));
+  background-image: linear-gradient(to bottom, #ffffff00, #ffffff 1.5%, #ffffff 98.5%, #ffffff00);
 }
 
 .destacado-articulo-link {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: inline-block;
   position: relative;
 }
@@ -115,9 +141,17 @@ main {
           transform: scale(1.03);
 }
 
+.destacado-articulo-link:hover .destacado-articulo-link-precio {
+  opacity: 1;
+}
+
+.destacado-articulo-link:hover .destacado-articulo-link-descuento-contenedor {
+  background-position: right;
+}
+
 .destacado-articulo-link-imagen {
-  -webkit-box-shadow: 0px 0px 3px 2px #080808;
-          box-shadow: 0px 0px 3px 2px #080808;
+  -webkit-box-shadow: 0px 0px 1px 2px #000000;
+          box-shadow: 0px 0px 1px 2px #000000;
 }
 
 .destacado-articulo-link-descuento {
@@ -134,18 +168,23 @@ main {
           justify-content: center;
   top: -10px;
   right: -10px;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .destacado-articulo-link-descuento-contenedor {
+  -webkit-transition: background-position .5s;
+  transition: background-position .5s;
   z-index: 1;
   position: absolute;
   width: 200%;
   -webkit-transform: rotate(45deg) translateY(-16px);
           transform: rotate(45deg) translateY(-16px);
-  background-color: #52FBFF;
-  color: #080808;
+  background: -webkit-gradient(linear, left top, right top, from(#52FBFF), color-stop(#459AFF), to(#45FF99));
+  background: linear-gradient(to right, #52FBFF, #459AFF, #45FF99);
+  background-size: 300%;
+  background-position: left;
+  color: #000000;
   text-align: center;
 }
 
@@ -154,9 +193,9 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #2f6668;
+  width: 7px;
+  height: 7px;
+  background-color: #3a4446;
 }
 
 .destacado-articulo-link-descuento::before {
@@ -164,23 +203,26 @@ main {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #2f6668;
+  width: 7px;
+  height: 7px;
+  background-color: #3a4446;
 }
 
 .destacado-articulo-link-precio {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: absolute;
-  bottom: -7px;
-  left: -7px;
+  bottom: 0;
+  left: 0;
   border-radius: 0.3rem;
-  background-color: #080808;
-  color: #e4ecec;
+  background: #ffffff;
+  color: #000000;
 }
 
 .juegos-articulo-link {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: inline-block;
   position: relative;
 }
@@ -190,9 +232,17 @@ main {
           transform: scale(1.03);
 }
 
+.juegos-articulo-link:hover .juegos-articulo-link-precio {
+  opacity: 1;
+}
+
+.juegos-articulo-link:hover .juegos-articulo-link-descuento-contenedor {
+  background-position: right;
+}
+
 .juegos-articulo-link-imagen {
-  -webkit-box-shadow: 0px 0px 3px 2px #080808;
-          box-shadow: 0px 0px 3px 2px #080808;
+  -webkit-box-shadow: 0px 0px 1px 2px #000000;
+          box-shadow: 0px 0px 1px 2px #000000;
 }
 
 .juegos-articulo-link-descuento {
@@ -209,18 +259,23 @@ main {
           justify-content: center;
   top: -10px;
   right: -10px;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .juegos-articulo-link-descuento-contenedor {
+  -webkit-transition: background-position .5s;
+  transition: background-position .5s;
   z-index: 1;
   position: absolute;
   width: 200%;
   -webkit-transform: rotate(45deg) translateY(-16px);
           transform: rotate(45deg) translateY(-16px);
-  background-color: #52FBFF;
-  color: #080808;
+  background: -webkit-gradient(linear, left top, right top, from(#52FBFF), color-stop(#459AFF), to(#45FF99));
+  background: linear-gradient(to right, #52FBFF, #459AFF, #45FF99);
+  background-size: 300%;
+  background-position: left;
+  color: #000000;
   text-align: center;
 }
 
@@ -229,9 +284,9 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #2f6668;
+  width: 7px;
+  height: 7px;
+  background-color: #3a4446;
 }
 
 .juegos-articulo-link-descuento::before {
@@ -239,24 +294,27 @@ main {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #2f6668;
+  width: 7px;
+  height: 7px;
+  background-color: #3a4446;
 }
 
 .juegos-articulo-link-precio {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: absolute;
-  bottom: -7px;
-  left: -7px;
+  bottom: 0;
+  left: 0;
   border-radius: 0.3rem;
-  background-color: #080808;
-  color: #e4ecec;
+  background: #ffffff;
+  color: #000000;
 }
 
 footer {
-  color: #e4ecec;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #080808), to(#ffffff00));
-  background-image: linear-gradient(to top, #080808 90%, #ffffff00);
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #000000), to(#ffffff00));
+  background-image: linear-gradient(to top, #000000 90%, #ffffff00);
 }
 
 footer div div p {
@@ -274,49 +332,64 @@ footer .redes {
   position: relative;
 }
 
+.estreno-articulo-link:hover .estreno-articulo-link-precio {
+  background: #000000;
+  color: #ffffff;
+  opacity: 1;
+}
+
 .estreno-articulo-link-fecha {
   z-index: 1;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -5px;
+  right: -15px;
   border-radius: 1rem;
-  background-color: #52FBFF;
-  color: #080808;
+  background-image: -webkit-gradient(linear, left top, right top, from(#52FBFF), color-stop(90%, #459AFF));
+  background-image: linear-gradient(to right, #52FBFF, #459AFF 90%);
+  color: #000000;
 }
 
 .estreno-articulo-link-fecha::after {
   z-index: -1;
   position: absolute;
   content: '';
-  width: 10px;
-  height: 21px;
+  width: 15px;
+  height: 23px;
   right: 0;
-  top: 19px;
-  background-color: #52FBFF;
+  top: 17px;
+  background: #459AFF;
 }
 
 .estreno-articulo-link-fecha::before {
   z-index: 1;
   position: absolute;
   content: '';
-  width: 10px;
+  width: 15px;
   height: 20px;
   right: 0;
   top: 32px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: #2f6668;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: #3a4446;
 }
 
 .estreno-articulo-link-precio {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: absolute;
-  bottom: -7px;
-  left: -7px;
+  bottom: 0;
+  left: 0;
   border-radius: 0.3rem;
-  background-color: #080808;
-  color: #e4ecec;
+  background: #ffffff;
+  color: #000000;
 }
 
 .faq h2 {
-  color: #002ab4;
+  color: #459AFF;
+}
+
+.faq p {
+  margin-left: 10px;
+  color: #3a4446;
 }

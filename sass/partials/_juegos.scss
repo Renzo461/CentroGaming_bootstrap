@@ -1,7 +1,16 @@
 .juegos{
     &-articulo{
-        &-link{            
+        &-link{
             @include animación_producto;
+            &:hover{        
+                @include escalado;
+                .juegos-articulo-link-precio{
+                    opacity: 1;
+                }  
+                .juegos-articulo-link-descuento-contenedor{
+                    background-position: right;
+                }                        
+            }
             &-imagen{
                 @include sombra_producto;
             }

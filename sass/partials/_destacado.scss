@@ -1,12 +1,21 @@
 .destacado{
     &-articulo{        
         &-link{
-            @include animación_producto;
+            @include animación_producto;            
+            &:hover{        
+                @include escalado;
+                .destacado-articulo-link-precio{
+                    opacity: 1;
+                }  
+                .destacado-articulo-link-descuento-contenedor{                     
+                    background-position: right;
+                }
+            }
             &-imagen{
                 @include sombra_producto;
             }
             &-descuento{
-                @include descuento;
+                @include descuento;                
             }
             &-precio{
                 @include precio;               

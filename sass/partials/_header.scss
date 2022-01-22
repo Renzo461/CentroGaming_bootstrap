@@ -1,11 +1,13 @@
 header {
-    color: white;
+    
     background-image: linear-gradient(to bottom, map-get($colores,negro) 90%, map-get($colores,transparente));
+    cursor: default;
     .logo {
         width: 68px;
         height: 51px;        
     }
     .lTexto {
+        color: white;
         font-size: 2rem;
         animation-name: led;
         animation-iteration-count: infinite;
@@ -21,12 +23,31 @@ header {
             100%{text-shadow: 0 0 2px map-get($colores, celeste);}
         }
     }
-    div nav a{
-        color: map-get($colores,blanco);          
-        &:hover{
-            color: map-get($colores,extra);
-            font-weight: bold;            
+    div nav {
+        .link{
+            position: relative;
+            color: map-get($colores,celeste);
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                height: 2px;
+                width: 0%;
+                background: map-get($colores,azul);
+                transition: .5s;
+                cursor: pointer;
+            }
+            &:hover{            
+                color: map-get($colores,azul-celeste );
+            }
+            &:hover::before{
+                width: 100%;
+            }
         }
+        .active{
+            position: relative;
+            color: map-get($colores,blanco);            
+        }        
     }
 }
 

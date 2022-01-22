@@ -4,35 +4,42 @@
             width: 100%;
             display: inline-block;
             position: relative;
+            &:hover{
+                .estreno-articulo-link-precio{
+                    background: map-get($colores,negro);
+                    color: map-get($colores,blanco);
+                    opacity: 1;
+                }
+            }
             &-fecha{
-                z-index: 1;
+                z-index: 1;                
                 position: absolute;
-                top: -10px;
-                right: -10px;
+                top: -5px;
+                right: -15px;
                 border-radius: 1rem;
-                background-color: map-get($colores,celeste);
+                background-image: linear-gradient(to right, map-get($colores,celeste),map-get($colores,azul) 90%);
                 color: map-get($colores,negro);
-                &::after{
-                    z-index: -1;
+                &::after{ 
+                    z-index: -1;                   
                     position: absolute;
                     content: '';
-                    width: 10px;
-                    height: 21px;
+                    width: 15px;
+                    height: 23px;
                     right: 0;
-                    top: 19px;
-                    background-color: map-get($colores,celeste);
+                    top: 17px;
+                    background: map-get($colores,azul);
                 }
                 &::before{
                     z-index: 1;
                     position: absolute;
                     content: '';
-                    width: 10px;
+                    width: 15px;
                     height: 20px;
                     right: 0;
                     top: 32px;
-                    border-top-right-radius: 1rem;
-                    border-bottom-right-radius: 1rem;
-                    background-color: map-get($colores,resaltar);
+                    border-top-right-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                    background-color: map-get($colores,sombra);
                 }
             }
             &-precio{

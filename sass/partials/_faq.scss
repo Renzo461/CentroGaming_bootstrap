@@ -1,6 +1,9 @@
 .faq {
-    
     h2 {
-        color: map-get($colores,extra);
+        color: map-get($colores,azul);
+    }
+    p{
+        margin-left: 10px;
+        color:map-get($colores,sombra);
     }
 }
