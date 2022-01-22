@@ -21,7 +21,7 @@ img {
 
 body {
   background-image: url(../Imagenes/background.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -125,8 +125,8 @@ header div nav .active {
 }
 
 main {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(1.5%, #ffffff), color-stop(98.5%, #ffffff), to(#ffffff00));
-  background-image: linear-gradient(to bottom, #ffffff00, #ffffff 1.5%, #ffffff 98.5%, #ffffff00);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(0.5%, #ffffff), color-stop(99.5%, #ffffff), to(#ffffff00));
+  background-image: linear-gradient(to bottom, #ffffff00, #ffffff 0.5%, #ffffff 99.5%, #ffffff00);
 }
 
 .destacado-articulo-link {
@@ -311,6 +311,10 @@ main {
   color: #000000;
 }
 
+.juegos-articulo-nombre {
+  margin-bottom: 1rem;
+}
+
 footer {
   color: #ffffff;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #000000), to(#ffffff00));
@@ -322,8 +326,8 @@ footer div div p {
 }
 
 footer .redes {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .estreno-articulo-link {

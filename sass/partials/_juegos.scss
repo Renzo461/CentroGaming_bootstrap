@@ -20,6 +20,9 @@
             &-precio{
                 @include precio;
             }            
-        }        
+        }  
+        &-nombre{
+            margin-bottom: 1rem;
+        }      
     }
 }
